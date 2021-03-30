@@ -8,13 +8,13 @@ logoutButton.action = function () {
             document.location.reload();
         }
     });
-}
+};
 
 ApiConnector.current((response) => {
     if (response.success) {
         ProfileWidget.showProfile(response.data);
     }
-})
+});
 
 const ratesBoard = new RatesBoard();
 
@@ -26,6 +26,8 @@ function getStocks() {
         }
     });
 }
+
+getStocks();
 
 setInterval(getStocks, 60000);
 
@@ -43,7 +45,7 @@ moneyManager.addMoneyCallback = function (data) {
             moneyManager.setMessage(false, response.error);
         }
     });
-}
+};
 
 moneyManager.conversionMoneyCallback = function (data) {
     ApiConnector.convertMoney(data, (response) => {
@@ -57,7 +59,7 @@ moneyManager.conversionMoneyCallback = function (data) {
             moneyManager.setMessage(false, response.error);
         }
     });
-}
+};
 
 moneyManager.sendMoneyCallback = function (data) {
     ApiConnector.transferMoney(data, (response) => {
@@ -71,7 +73,7 @@ moneyManager.sendMoneyCallback = function (data) {
             moneyManager.setMessage(false, response.error);
         }
     });
-}
+};
 
 const favoritesWidget = new FavoritesWidget();
 
@@ -97,10 +99,10 @@ favoritesWidget.addUserCallback = function (data) {
             favoritesWidget.setMessage(false, response.error);
         }
     });
-}
+};
 
 favoritesWidget.removeUserCallback = function (id) {
-    ApiConnector.removeUserFromFavorites(id, response => {
+    ApiConnector.removeUserFromFavorites(id, (response) => {
         if (response.success) {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
@@ -113,4 +115,4 @@ favoritesWidget.removeUserCallback = function (id) {
             favoritesWidget.setMessage(false, response.error);
         }
     });
-}
+};
