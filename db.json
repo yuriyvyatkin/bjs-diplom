@@ -72,6 +72,18 @@
         "EUR": 100,
         "NTC": 0
       }
+    },
+    {
+      "created_at": "2021-08-08T09:56:37.238Z",
+      "login": "Юрий",
+      "password": "123",
+      "id": 7,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
     }
   ],
   "favorites": {
