@@ -31,7 +31,7 @@ function setDefaultUser(database) {
         login: 'ivan@demo.ru',
         password: 'demo',
         id: 2,
-        netocoins: 100,
+        netcoins: 100,
         balance: {
           RUB: 20, USD: 0, EUR: 0, NTC: 100,
         },

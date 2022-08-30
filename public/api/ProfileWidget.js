@@ -11,9 +11,9 @@ class ProfileWidget {
     profileName.dataset.userName = data.login;
     profileName.innerText = data.login;
 
-    profileMoney.querySelector('[data-user-wallet-rub]').innerText = data.balance.RUB.toPrecision(5);
-    profileMoney.querySelector('[data-user-wallet-eur]').innerText = data.balance.EUR.toPrecision(5);
-    profileMoney.querySelector('[data-user-wallet-usd]').innerText = data.balance.USD.toPrecision(5);
-    profileMoney.querySelector('[data-user-wallet-ntc]').innerText = data.balance.NTC.toPrecision(5);
+    profileMoney.querySelector('[data-user-wallet-rub]').innerText = data.balance.RUB.toFixed(2);
+    profileMoney.querySelector('[data-user-wallet-eur]').innerText = data.balance.EUR.toFixed(2);
+    profileMoney.querySelector('[data-user-wallet-usd]').innerText = data.balance.USD.toFixed(2);
+    profileMoney.querySelector('[data-user-wallet-ntc]').innerText = data.balance.NTC.toFixed(2);
   }
 }
